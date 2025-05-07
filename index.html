@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goro＆Eruna</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome</h1>
+        <p>Please enter the password</p>
+        <label for="passwordInput">Password</label>
+        <input type="password" id="passwordInput" placeholder="Enter password">
+        <button onclick="checkPassword()">Submit</button>
+        <p id="errorMessage" style="display:none;">Incorrect password. Try again!</p>
+
+
+        <button onclick="showHint()">Need a hint?</button>
+        <p id="hintMessage" style="color:#FF97C2;display:none;"> 💡✨It's one of our watchwords; <br> Which word comes after "Eruna is Goro's, Goro is Eruna's"? ※ん=nn </p>
+    </div>
+
+    <script>
+        function checkPassword(){
+            const password = document.getElementById ("passwordInput").value;
+            const correctPassword="sounanndamonn"
+            if (password===correctPassword){
+                window.location.href="main.html";
+
+            }else{
+                document.getElementById("errorMessage").style.display = "block";
+            }
+        }
+         
+        function showHint(){
+            document.getElementById("hintMessage").style.display="block";     
+          }
+
+        
+    </script>
+</body>
+
+</html>
